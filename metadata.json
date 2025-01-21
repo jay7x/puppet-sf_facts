@@ -4,8 +4,8 @@
   "author": "Yury Bushmelev",
   "summary": "Puppet module with Solarflare NIC facts",
   "license": "Apache-2.0",
-  "source": "https://github.com/jay7x/puppet-sf_fact",
-  "issues_url": "https://github.com/jay7x/puppet-sf_fact/issues",
+  "source": "https://github.com/jay7x/puppet-sf_facts",
+  "issues_url": "https://github.com/jay7x/puppet-sf_facts/issues",
   "dependencies": [
 
   ],
