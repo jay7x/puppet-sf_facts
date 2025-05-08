@@ -25,7 +25,13 @@ describe 'solarflare_adapters fact' do
     }
   end
 
+  before :each do
+    # Make it testable on non-Linux also
+    allow(Facter.fact(:kernel)).to receive(:value).and_return('Linux')
+  end
+
   it do
+    # Mock filesystem calls
     expect(Dir).to receive(:entries).with('/sys/class/net').and_return(['.', '..', 'lo', 'eth0'] + cards.keys.map(&:to_s))
     expect(File).to receive(:read).with('/sys/class/net/eth0/device/vendor').and_return('0x8086')
     cards.each do |nic, opts|
